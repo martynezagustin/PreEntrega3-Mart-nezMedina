@@ -1,0 +1,11 @@
+/*mixin para tamaños de fuente de card-titles y altura*/
+@mixin cards-titles ($fuente, $altura){
+    font-size: $fuente;
+    height: $altura;
+}
+
+.card-duration{
+    font-size: 1.3em;
+    text-decoration: 1px underline gray;
+}
+

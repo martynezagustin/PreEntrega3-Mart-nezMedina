@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="¡Contáctanos para sacarte tus dudas!">
+  <meta name="keywords"
+    content="acerca de nosotros, about me, acerca de nosotros consulteccnia, acerca de marketing, acerca de empresas">
+  <title>Contacto - ConsulTeccnia</title>
+
+  <!-- Facebook Meta Tags -->
+  <meta property="og:url" content="https://martynezagustin.github.io/PreEntrega3-MartinezMedina/views/contact.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Contacto - ConsulTeccnia">
+  <meta property="og:description"
+    content="¡Contáctanos para sacarte tus dudas!">
+
+  <!-- Twitter Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Contacto - ConsulTeccnia">
+  <meta name="twitter:description"
+    content="¡Contáctanos para sacarte tus dudas!">
+
+  <!-- invocar fuentes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600&display=swap" rel="stylesheet">
+  <!-- fin invocar fuentes -->
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
+  <!-- fin Bootstrap -->
+
+  <!-- invocar CSS -->
+  <link rel="stylesheet" href="../css/style.css">
+  <!-- fin invocar CSS -->
+  <link rel="shortcut icon" href="../assets/imgs/favicon.png" type="image/x-icon">
+</head>
+
+<body class="body">
+  <!-- inicio del header -->
+  <header class="header">
+    <!-- inicio de barra de navegación -->
+    <nav class="navbar navbar-expand-lg navegador-gris">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="../index.html">
+          <img src="../assets/imgs/logotype.png" width="190" alt="logotype">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01"
+          aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link p-2" aria-current="page" href="./courses.html">Capacitaciones</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link p-2" href="./services.html">Servicios</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link p-2" href="./about-me.html">Acerca de Nosotros</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link p-2 active" href="./contact.html">Contacto</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- fin barra de navegación -->
+  </header>
+  <!-- fin del header -->
+
+  <!-- inicio del main -->
+  <main class="main">
+
+    <!-- section para el contacto -->
+    <section class="p-3 mt-5 contact">
+      <h1 class="contact__h1">CONTACTO</h1>
+      <!-- inicio del formulario -->
+      <form action="#" class="formulario p-3 mt-5">
+        <div class="mb-3">
+          <label for="first-name" class="form-label">Nombre</label>
+          <input type="text" class="form-control" id="first-name" placeholder="Nombre">
+        </div>
+
+        <div class="mb-3">
+          <label for="last-name" class="form-label">Apellido</label>
+          <input type="text" class="form-control" id="last-name" placeholder="Apellido"></input>
+        </div>
+
+        <div class="mb-3">
+          <label for="correo-electronico" class="form-label">E-mail</label>
+          <input type="email" class="form-control" id="correo-electronico" placeholder="email@ejemplo.com">
+        </div>
+
+        <p class="lead form-label">¿Qué tipo de empresa tiene?</p>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="type-business" value="ninguno"
+            id="ninguno">
+          <label class="form-check-label" for="ninguno">
+            Ninguna
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="type-business" value="pequeño-emprendedor"
+            id="pequeño-emprendedor">
+          <label class="form-check-label" for="pequeño-emprendedor">
+            Soy un pequeño emprendedor
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="type-business" value="pequeña-empresa" id="pequeña-empresa"
+            checked>
+          <label class="form-check-label" for="pequeña-empresa">
+            Empresa pequeña
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="type-business" value="mediana-empresa"
+            id="mediana-empresa">
+          <label class="form-check-label" for="mediana-empresa">
+            Empresa mediana
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="type-business" value="gran-empresa" id="gran-empresa"
+            checked>
+          <label class="form-check-label" for="gran-empresa">
+            Empresa grande
+          </label>
+        </div>
+
+        <div class="mb-3">
+          <label for="exampleFormControlTextarea1" class="form-label lead mt-3">Deje un mensaje:</label>
+          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+        </div>
+
+        <div>
+          <button class="btn btn-secondary" type="submit">ENVIAR</button>
+        </div>
+      </form>
+      <!-- fin del formulario -->
+
+    </section>
+    <!-- fin del section de contacto -->
+
+  </main>
+  <!-- fin del main -->
+
+    <!-- inicio del footer -->
+    <footer class="footer">
+
+      <div class="contenedor-instagram">
+          <a class="enlace-insta" href="https://www.instagram.com/consulteccnia" target="_blank">
+              <img class="insta" src="../assets/imgs/ig_white.png" alt="instagram-consulteccnia">Instagram
+          </a>
+      </div>
+      <hr>
+      <p><b>SUSCRÍBETE AL NEWSLETTER:</b></p>
+
+      <!-- newsletter suscripción -->
+      <form action="#">
+          <div>
+              <label for="nombre" class="footer__label">Tu nombre:</label>
+          </div>
+          <input type="text" name="nombre" id="nombre">
+          <div>
+              <label for="correo" class="footer__label">E-mail:</label>
+          </div>
+          <input type="email" name="email" id="correo">
+          <div>
+              <button class="btn btn-primary footer__form-button mt-2" type="submit">SUSCRIBIRME</button>
+          </div>
+      </form>
+      <!-- fin newsletter suscripción -->
+
+      <hr>
+
+      <div class="creditos">
+          <p>&copy; ConsulTeccnia 2023. Todos los derechos reservados.</p>
+          <p>Desarrollado por <a href="https://www.instagram.com/martynezprod" target="_blank"><b>Martynez</b></a></p>
+          <img src="../assets/imgs/logotype-of-footer.png" alt="logotype-consulteccnia-footer"
+              class="footer__logotype">
+      </div>
+  </footer>
+  <!-- fin footer -->
+
+
+</body>
+
+</html>

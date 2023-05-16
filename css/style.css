@@ -1,0 +1,761 @@
+@charset "UTF-8";
+/*imports*/
+/*archivo sobre fuentes y propiedades*/
+/*estilos en general para h1 desktop, luego usados como extensión*/
+.h1-styles-desktop, h1 {
+  font-size: 4.5em;
+  font-weight: 900;
+}
+
+/*estilos en general para h2 desktop, luego usado como extensión*/
+.h2-styles-desktop, h2 {
+  font-size: 2.5em;
+  color: rgb(40, 40, 40);
+  font-weight: 800;
+}
+
+/*estilos en general para h3 desktop, luego usarlo como extensión*/
+.h3-styles-desktop, h3 {
+  font-size: 1.53em;
+  text-align: center;
+  font-weight: 700;
+}
+
+/*clase para los hovers del a*/
+.anchor-hover, .header .active:hover, .header .nav-link:hover {
+  background-color: rgb(20, 20, 20);
+  color: #e3ded8;
+  border-radius: 5px;
+  transition: 0.5s all;
+}
+
+.p-styles-desktop, p {
+  font-size: 1.44em;
+}
+
+/*archivo sobre colores*/
+/*archivo para maquetar grids*/
+/*archivo para sombras*/
+/*archivo para los anchos de cajas, textos u otros elementos*/
+/*archivo que añade props en los boxs y divs*/
+/*archivo que configura props en tarjetitas (cards)*/
+/*mixin para tamaños de fuente de card-titles y altura*/
+.card-duration, .cursos .card-duration {
+  font-size: 1.3em;
+  text-decoration: 1px underline gray;
+}
+
+/*archivo que añade animaciones*/
+.animation-button-courses {
+  animation-name: animation-button-courses;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-duration: 5s;
+}
+@keyframes animation-button-courses {
+  0% {
+    opacity: 0.2;
+  }
+  25% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 0.6;
+    background-color: rgb(20, 20, 20);
+    box-shadow: 0px 0px 25px 3px rgb(97, 97, 97);
+    color: #e3ded8;
+    border-radius: 40px;
+  }
+  75% {
+    opacity: 0.8;
+    background-color: rgb(20, 20, 20);
+    box-shadow: 0px 0px 25px 3px rgb(97, 97, 97);
+    color: #e3ded8;
+    box-shadow: 2px 0px 15px 1px rgb(201, 201, 172);
+  }
+  100% {
+    opacity: 1;
+    background-color: rgb(20, 20, 20);
+    box-shadow: 0px 0px 25px 3px rgb(97, 97, 97);
+    color: #e3ded8;
+  }
+}
+
+/*reseteo universal*/
+* {
+  margin: 0%;
+  padding: 0%;
+}
+
+/*fuente de texto*/
+body {
+  font-family: "Archivo", sans-serif;
+}
+
+/*atributos a los h's en general*/
+/*fin atributos a los h's en general*/
+/*estructuras de la clase body*/
+.body {
+  display: grid;
+  grid-template: "header" auto "main" auto "footer" auto/100%;
+  background-image: url("../assets/imgs/fondo-body.png");
+  background-attachment: fixed;
+}
+
+/*fin estructuras al body*/
+/*atributos en general al header*/
+.header {
+  grid-area: header;
+  max-width: 100%;
+  background-color: #e3ded8;
+  box-shadow: 0px 0px 25px 3px rgb(97, 97, 97);
+}
+.header .nav-link {
+  margin-left: 5px;
+}
+.header .nav-link:hover {
+  text-decoration: underline;
+}
+.header .active {
+  font-weight: bolder;
+}
+.header .active:hover {
+  text-decoration: none;
+}
+
+/*fin atributos en general al header*/
+/*clase main con su grid area*/
+.main {
+  grid-area: main;
+}
+
+/*atributos al primer section del index*/
+.oferta-cursos {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(50, 50, 50);
+  border: 3px double #e3ded8;
+}
+.oferta-cursos .oferta-cursos__container {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  max-width: 50%;
+  padding: 20px;
+}
+.oferta-cursos .oferta-cursos__container .oferta-cursos__h1 {
+  font-size: 1.5em;
+  background-color: #e3ded8;
+  border-left: 10px solid rgb(20, 20, 20);
+}
+.oferta-cursos .oferta-cursos__container .oferta-cursos__p {
+  margin: 0%;
+  font-size: 2.6em;
+  text-align: start;
+  color: #e3ded8;
+}
+.oferta-cursos .oferta-cursos__container .oferta-cursos__button {
+  font-weight: 600;
+  font-size: 1.3em;
+  font-family: "Archivo", sans-serif;
+  background-color: #e3ded8;
+  color: rgb(50, 50, 50);
+}
+.oferta-cursos .oferta-cursos__container .oferta-cursos__button:hover {
+  box-shadow: 0px 0px 25px 3px rgb(97, 97, 97);
+  transition: 1s;
+}
+.oferta-cursos .oferta-cursos__img {
+  width: 50%;
+}
+
+/*fin de atributos al primer section del index*/
+/*atributos al section de beneficios-consulteccnia*/
+.beneficios-consulteccnia {
+  max-width: 100%;
+  background-color: #e3ded8;
+  border-bottom: 1px solid black;
+}
+.beneficios-consulteccnia .beneficios-consulteccnia__caja {
+  padding: 10px;
+  color: rgb(20, 20, 20);
+  max-width: 27%;
+}
+.beneficios-consulteccnia .beneficios-consulteccnia__caja:hover {
+  box-shadow: 0px 0px 15px 3px rgb(134, 134, 134);
+  transition: 0.5s all;
+  background-color: #d5d0ca;
+}
+.beneficios-consulteccnia .beneficios-consulteccnia__caja .beneficios_consulteccnia__h3 {
+  text-decoration: underline gray;
+}
+.beneficios-consulteccnia .beneficios-consulteccnia__caja .beneficios-consulteccnia__img-card {
+  width: 24%;
+}
+
+/*fin de atributos al section de beneficios-consulteccnia*/
+/*atributos al section de ventajas-consulteccnia*/
+.ventajas-consulteccnia {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.9)), url("../assets/imgs/rascacielos.jpg");
+  background-size: cover;
+  padding: 10px;
+}
+.ventajas-consulteccnia .ventajas-consulteccnia__h2 {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  color: #e3ded8;
+}
+.ventajas-consulteccnia .contenedor-padre {
+  background-image: url("../assets/imgs/raya-divisora.png");
+  background-size: cover;
+  background-position: center center;
+  margin-bottom: 100px;
+}
+.ventajas-consulteccnia .contenedor-padre .ventajas-consulteccnia__contenedor-padre__flex-start {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.ventajas-consulteccnia .contenedor-padre .ventajas-consulteccnia__contenedor-padre__flex-end {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.ventajas-consulteccnia .contenedor-padre .ventajas-consulteccnia__contenedor {
+  background-image: linear-gradient(20deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.8)), url("../assets/imgs/city-map.jpg");
+  background-attachment: fixed;
+  padding: 10px;
+  color: #e3ded8;
+  max-width: 48%;
+  border: 5px solid #e3ded8;
+  text-align: center;
+}
+.ventajas-consulteccnia .contenedor-padre .ventajas-consulteccnia__contenedor:hover {
+  transition: 0.5s all;
+  box-shadow: 0px 0px 15px 3px rgb(134, 134, 134);
+  transform: skew(0deg, 2deg);
+}
+.ventajas-consulteccnia .contenedor-padre .ventajas-consulteccnia__contenedor .ventajas-consulteccnia__img-ventaja {
+  width: 24%;
+}
+.ventajas-consulteccnia .contenedor-padre .ventajas-consulteccnia__contenedor .ventajas-consulteccnia__p {
+  font-size: 1.7em;
+  color: #e3ded8;
+}
+
+/*fin de atributos al section de ventajas-consulteccnia*/
+.contenedores-eficacia {
+  background-color: #e3ded8;
+  padding: 110px;
+}
+.contenedores-eficacia img {
+  width: 22%;
+}
+.contenedores-eficacia .contenedores-eficacia__container {
+  box-shadow: 0px 0px 20px 2px rgb(50, 50, 50);
+  border-bottom: 3px solid #e3ded8;
+  background-color: rgb(50, 50, 50);
+  color: #e3ded8;
+  display: flex;
+}
+.contenedores-eficacia .contenedores-eficacia__container h2 {
+  color: #e3ded8;
+}
+.contenedores-eficacia .contenedores-eficacia__container .contenedores-eficacia__img-left {
+  border-right: 1px solid #e3ded8;
+}
+.contenedores-eficacia .contenedores-eficacia__container .contenedores-eficacia__img-right {
+  border-left: 1px solid #e3ded8;
+}
+.contenedores-eficacia .contenedores-eficacia__container .contenedores-eficacia__container-hijo {
+  padding: 19px;
+}
+
+/*atributos a ubicacion*/
+.ubicacion {
+  border-top: 1px solid rgb(20, 20, 20);
+  background-color: rgb(50, 50, 50);
+  display: flex;
+  flex-direction: column;
+  border-bottom: 3px solid #e3ded8;
+  padding: 20px;
+}
+.ubicacion .ubicacion__h2 {
+  color: #e3ded8;
+}
+.ubicacion .ubicacion__padre {
+  display: flex;
+}
+.ubicacion .ubicacion__padre .ubicacion__p {
+  color: #e3ded8;
+  padding: 15px;
+}
+.ubicacion .ubicacion__padre .ubicacion__i-frame {
+  border-right: 1px solid rgb(50, 50, 50);
+  border-left: 1px solid #e3ded8;
+  border-bottom: 1px solid #e3ded8;
+  border-top: 1px solid #e3ded8;
+}
+.ubicacion .ubicacion__padre .ubicacion__datos {
+  border-left: 1px solid #e3ded8;
+  border-right: 1px solid #e3ded8;
+  border-bottom: 1px solid #e3ded8;
+}
+.ubicacion .ubicacion__padre .ubicacion__datos .ubicacion__datos-p {
+  background-color: #e3ded8;
+  color: rgb(50, 50, 50);
+}
+.ubicacion .ubicacion__padre .ubicacion__datos .ubicacion__datos-ul {
+  color: #e3ded8;
+}
+
+/*fin atributos a ubicacion*/
+/*atributos a la sección cursos*/
+.cursos .cursos__h2 {
+  background-color: rgb(20, 20, 20);
+  color: #e3ded8;
+  border-radius: 5px;
+  box-shadow: 0px 0px 15px 2px lightslategray;
+}
+.cursos hr {
+  opacity: 1;
+}
+.cursos .row {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-template-rows: auto;
+}
+.cursos .col {
+  padding-right: 0%;
+  padding-left: 0%;
+}
+.cursos .card-title {
+  font-size: 1.4em;
+  height: 90px;
+}
+/*fin atributos a sección cursos*/
+/*atributos en general a las cards de servicios y capacitaciones*/
+.card {
+  background-color: #e3ded8;
+  box-shadow: 0px 2px 8px 2px gray;
+  margin: 10px;
+}
+.card:hover {
+  box-shadow: 0px 0px 15px 3px rgb(134, 134, 134);
+  transition: 0.5s all;
+  background-color: rgb(20, 20, 20);
+  color: #e3ded8;
+}
+.card:hover .btn {
+  background-color: #e3ded8;
+  color: rgb(20, 20, 20);
+  transition: 0.5s all;
+  font-weight: 400;
+}
+.card:hover .card-img-top {
+  transition: 0.5s all;
+}
+.card .card-text {
+  font-size: 0.94em;
+}
+
+/*fin atributos en general a las cards de servicios y capacitaciones*/
+/*atributos en general a la sección de servicios*/
+.servicios {
+  max-width: 100%;
+}
+.servicios .row {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+}
+.servicios .col {
+  padding-right: 0%;
+  padding-left: 0%;
+}
+.servicios .card-title {
+  font-size: 1.5em;
+  height: 110px;
+}
+
+/*fin atributos en general a la sección de servicios*/
+/*atributos a la sección de about-me*/
+.about-me {
+  padding: 10px;
+}
+.about-me .about-me__img {
+  max-width: 90%;
+  box-shadow: 0px 0px 25px 3px rgb(97, 97, 97);
+}
+.about-me .about-me__legend {
+  font-size: 1.3em;
+}
+
+/*fin de atributos a la sección de about-me*/
+/*atributos al section de la page contactos*/
+.contact {
+  /* atributos a elementos dentro de la clase formulario*/
+}
+.contact .formulario {
+  color: rgb(20, 20, 20);
+  background-color: #e3ded8;
+  border: 1px solid rgb(20, 20, 20);
+}
+.contact .formulario .form-control {
+  width: 40%;
+  border: 1px solid rgb(20, 20, 20);
+  border-radius: 0px;
+}
+.contact .formulario .form-label {
+  font-weight: 800;
+}
+
+/* fin de atributos a la section de page contactos*/
+/*atributos a elementos dentro de la clase footer*/
+.footer {
+  padding: 20px 0px 15px 5px;
+  grid-area: footer;
+  background-color: rgb(20, 20, 20);
+}
+.footer p {
+  color: #e3ded8;
+}
+.footer .enlace-insta {
+  text-decoration: none;
+  color: #e3ded8;
+  font-weight: 800;
+}
+.footer .insta {
+  width: 2%;
+  padding: 3px;
+}
+.footer hr {
+  color: #e3ded8;
+}
+.footer a {
+  color: #e3ded8;
+}
+.footer .creditos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #e3ded8;
+}
+.footer .footer__logotype {
+  width: 10%;
+}
+.footer .footer__label {
+  color: #e3ded8;
+}
+.footer .btn {
+  background-color: #e3ded8;
+  color: rgb(50, 50, 50);
+  border: none;
+}
+
+/*fin atributos a elementos dentro de la clase footer*/
+/*AQUÍ COMIENZAN LOS MEDIA QUERIES*/
+/*AQUÍ COMIENZAN LOS MEDIA QUERIES*/
+/*AQUÍ COMIENZAN LOS MEDIA QUERIES*/
+/*adaptación a extra large*/
+@media only screen and (max-width: 1200px) {
+  h1 {
+    font-size: 4em;
+  }
+  h2 {
+    font-size: 2.2em;
+  }
+  h3 {
+    font-size: 1.4em;
+  }
+  p {
+    font-size: 1.3em;
+  }
+  /*sección oferta-cursos*/
+  .oferta-cursos {
+    height: auto;
+  }
+  .oferta-cursos .oferta-cursos__container .oferta-cursos__p {
+    font-size: 2.3em;
+  }
+  .oferta-cursos .oferta-cursos__container .oferta-cursos__button {
+    padding: 10px;
+  }
+  /*fin sección oferta-cursos*/
+  /*sección beneficios-consulteccnia*/
+  .beneficios-consulteccnia .beneficios-consulteccnia__caja {
+    padding: 10px;
+    color: rgb(20, 20, 20);
+    max-width: 75%;
+  }
+  /*fin de sección beneficios-consulteccnia*/
+  /*section ventajas-consulteccnia*/
+  .ventajas-consulteccnia .contenedor-padre .ventajas-consulteccnia__contenedor {
+    padding: 10px;
+    color: #ebe5de;
+    max-width: 48%;
+  }
+  .ventajas-consulteccnia .contenedor-padre .ventajas-consulteccnia__contenedor:hover {
+    transform: none;
+  }
+  .ventajas-consulteccnia .contenedor-padre .ventajas-consulteccnia__contenedor .ventajas-consulteccnia__h2 {
+    padding: 0px 0px 15px 0px;
+  }
+  .ventajas-consulteccnia .contenedor-padre .ventajas-consulteccnia__contenedor .ventajas-consulteccnia__p {
+    font-size: 1.5em;
+  }
+  /*fin section ventajas-consulteccnia*/
+  .contenedores-eficacia img {
+    width: 50%;
+  }
+  .cursos .card-duration {
+    font-size: 1.2em;
+  }
+  /*atributos section contact*/
+  .contact .formulario .form-control {
+    width: 70%;
+  }
+  /*fin de atributos al section contact*/
+  /*elementos del pie*/
+  .footer .insta {
+    width: 4%;
+  }
+  .footer .footer__logotype {
+    width: 10%;
+  }
+}
+/* adaptación a large*/
+@media only screen and (max-width: 992px) {
+  h1 {
+    font-size: 3.2em;
+  }
+  h2 {
+    font-size: 2em;
+  }
+  h3 {
+    font-size: 1.2em;
+  }
+  p {
+    font-size: 1.2em;
+  }
+  header {
+    box-shadow: 0px 0px 25px 3px rgb(97, 97, 97);
+  }
+  header .navbar > .container,
+  header .navbar > .container-fluid,
+  header .navbar > .container-lg,
+  header .navbar > .container-md,
+  header .navbar > .container-sm,
+  header .navbar > .container-xl,
+  header .navbar > .container-xxl {
+    display: flex;
+    flex-wrap: inherit;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  header .navbar-toggler {
+    box-shadow: 0px 2px 5px 0px;
+  }
+  header .nav-link {
+    color: rgb(20, 20, 20);
+    font-weight: 800;
+  }
+  header .navbar-collapse {
+    margin-top: 12.5px;
+  }
+  /*sección de oferta-cursos*/
+  .oferta-cursos .oferta-cursos__container {
+    max-width: 100%;
+  }
+  .oferta-cursos .oferta-cursos__container .oferta-cursos__h1 {
+    font-size: 1.2em;
+  }
+  .oferta-cursos .oferta-cursos__container .oferta-cursos__p {
+    font-size: 1.6em;
+  }
+  .oferta-cursos .oferta-cursos__container .oferta-cursos__button {
+    font-size: 1.2em;
+  }
+  /*fin de sección de oferta-cursos*/
+  /*sección de beneficios-consulteccnia*/
+  .beneficios-consulteccnia .beneficios-consulteccnia__caja .beneficios-consulteccnia__p {
+    font-size: 1.2em;
+  }
+  /*fin sección de beneficios-consulteccnia*/
+  /*section ventajas-consulteccnia*/
+  .ventajas-consulteccnia .ventajas-consulteccnia__h2 {
+    margin: 16.6666666667px;
+  }
+  .ventajas-consulteccnia .contenedor-padre {
+    background-image: none;
+  }
+  .ventajas-consulteccnia .contenedor-padre .ventajas-consulteccnia__contenedor-padre__flex-end,
+  .ventajas-consulteccnia .contenedor-padre .ventajas-consulteccnia__contenedor-padre__flex-start {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 12px;
+  }
+  .ventajas-consulteccnia .contenedor-padre .ventajas-consulteccnia__contenedor-padre__flex-end .ventajas-consulteccnia__contenedor,
+  .ventajas-consulteccnia .contenedor-padre .ventajas-consulteccnia__contenedor-padre__flex-start .ventajas-consulteccnia__contenedor {
+    padding: 10px;
+    color: #ebe5de;
+    max-width: 95%;
+  }
+  .ventajas-consulteccnia .contenedor-padre .ventajas-consulteccnia__contenedor-padre__flex-end .ventajas-consulteccnia__contenedor .ventajas-consulteccnia__p,
+  .ventajas-consulteccnia .contenedor-padre .ventajas-consulteccnia__contenedor-padre__flex-start .ventajas-consulteccnia__contenedor .ventajas-consulteccnia__p {
+    font-size: 1.2em;
+  }
+  /*fin del section ventajas-consulteccnia*/
+  .cursos .card-duration {
+    font-size: 1.1em;
+  }
+  /*sección de about-me*/
+  .about-me .about-me__legend {
+    font-size: 1.2em;
+  }
+  /*fin sección de about-me*/
+  /*section de contact*/
+  .contact {
+    /*input del formulario*/
+  }
+  .contact .formulario .form-control {
+    width: 60%;
+  }
+  /*fin section de contact*/
+  /*elementos del pie*/
+  .footer .footer__logotype {
+    width: 17%;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 845px) {
+  .oferta-cursos {
+    display: flex;
+    flex-direction: column;
+  }
+  .oferta-cursos .oferta-cursos__container {
+    color: rgb(20, 20, 20);
+  }
+  .oferta-cursos .oferta-cursos__container .oferta-cursos__p {
+    font-size: 2.1em;
+  }
+  .oferta-cursos .oferta-cursos__container .oferta-cursos__button {
+    font-size: 1em;
+  }
+  .oferta-cursos .oferta-cursos__img {
+    width: 100%;
+  }
+  .contenedores-eficacia img {
+    display: none;
+  }
+  /*atributos a ubicacion*/
+  .ubicacion {
+    padding: 10px;
+  }
+  .ubicacion .ubicacion__padre {
+    flex-direction: column;
+  }
+  /*fin atributos a ubicacion*/
+}
+/*adaptando medidas a extra small*/
+@media only screen and (max-width: 576px) {
+  h1 {
+    font-size: 2.3em;
+  }
+  h2 {
+    font-size: 1.4em;
+  }
+  h3 {
+    font-size: 1em;
+  }
+  p {
+    font-size: 0.9em;
+  }
+  header img {
+    width: 130px;
+  }
+  /*section de oferta-cursos*/
+  .oferta-cursos {
+    display: flex;
+    flex-direction: column;
+  }
+  .oferta-cursos .oferta-cursos__container {
+    color: rgb(20, 20, 20);
+  }
+  .oferta-cursos .oferta-cursos__container .oferta-cursos__h1 {
+    font-size: 1em;
+  }
+  .oferta-cursos .oferta-cursos__container .oferta-cursos__p {
+    font-size: 1.2em;
+  }
+  .oferta-cursos .oferta-cursos__container .oferta-cursos__button {
+    font-size: 1em;
+  }
+  .oferta-cursos .oferta-cursos__img {
+    width: 100%;
+  }
+  /*fin atributos al section de ubicacion*/
+  /*sección de beneficios-consulteccnia*/
+  .beneficios-consulteccnia .beneficios-consulteccnia__caja {
+    padding: 10px;
+    color: rgb(20, 20, 20);
+    max-width: 100%;
+  }
+  .beneficios-consulteccnia .beneficios-consulteccnia__caja .beneficios-consulteccnia__p {
+    font-size: 0.9em;
+  }
+  /*fin sección de beneficios-consulteccnia*/
+  /*section ventajas-consulteccnia*/
+  .ventajas-consulteccnia .ventajas-consulteccnia__h2 {
+    margin: 6.25px;
+  }
+  /*sección de about-me*/
+  .about-me__legend {
+    font-size: 0.9em;
+  }
+  /*fin de sección de about-me*/
+  .contenedores-eficacia {
+    padding: 20px;
+  }
+  .contenedores-eficacia img {
+    display: none;
+  }
+  .contenedores-eficacia .contenedores-eficacia__container h2 {
+    font-size: 1em;
+  }
+  /*atributos a ubicacion*/
+  .ubicacion {
+    padding: 15px;
+  }
+  .ubicacion .ubicacion__padre {
+    flex-direction: column;
+  }
+  /*fin atributos a ubicacion*/
+  /*atributos a contact*/
+  .contact .formulario .form-control {
+    width: 90%;
+  }
+  /*fin atributos a contact*/
+  /*titulos de las cards en cursos*/
+  .cursos .card-title {
+    font-size: 1.5em;
+    height: 80px;
+  }
+  /*títulos de las cards en servicios*/
+  .servicios .card-title {
+    font-size: 1.2em;
+    height: 100px;
+  }
+  .servicios .card-text {
+    font-size: 1em;
+  }
+  /*el logotipo del footer al final*/
+  .footer .insta {
+    width: 6.5%;
+    padding: 3px;
+  }
+  .footer .footer__logotype {
+    width: 33%;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
