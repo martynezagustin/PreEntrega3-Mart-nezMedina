@@ -53,6 +53,20 @@
     <!-- inicio del header -->
     <header class="header">
         <!-- inicio de barra de navegación -->
+
+        <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1"
+            id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasScrollingLabel">MI PLAN DE FORMACIÓN</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <div id="containerFormacion">
+
+                </div>
+            </div>
+        </div>
+
         <nav class="navbar navbar-expand-lg navegador-gris">
             <div class="container-fluid">
                 <a class="navbar-brand" href="../index.html">
@@ -77,6 +91,12 @@
                         <li class="nav-item">
                             <a class="nav-link p-2" href="./contact.html">Contacto</a>
                         </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link p-2" type="button" data-bs-toggle="offcanvas"
+                            data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">Mi Plan de Formación <span id="count-course"></span></a>
+                        </li>
+                            
                     </ul>
                 </div>
             </div>
@@ -143,7 +163,7 @@
         </div>
         <hr>
         <p><b>SUSCRÍBETE AL NEWSLETTER:</b></p>
-  
+
         <!-- newsletter suscripción -->
         <form action="#">
             <div>
@@ -159,9 +179,9 @@
             </div>
         </form>
         <!-- fin newsletter suscripción -->
-  
+
         <hr>
-  
+
         <div class="creditos">
             <p>&copy; ConsulTeccnia 2023. Todos los derechos reservados.</p>
             <p>Desarrollado por <a href="https://www.instagram.com/martynezprod" target="_blank"><b>Martynez</b></a></p>
