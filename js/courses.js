@@ -69,8 +69,8 @@ const rowMarketingAndEmpresas = document.querySelector('.marketing')
 let cursosProgram = cursos.filter((curso) => curso.categoria === 'Programación')
 let cursosMarketingAndEmpresas = cursos.filter((curso) => curso.categoria === 'Marketing y Empresas')
 
-let cursosPlanFormacion = []
-let cursosPlanFormacionJSON = (idCurso, curso) => {localStorage.setItem(idCurso, curso)}
+let cursosPlanFormacion = JSON.parse(localStorage.getItem('Cursos')) || []
+// let cursosPlanFormacionJSON = (idCurso, curso) => {localStorage.setItem(idCurso, curso)}
 
 //generar cursos mediante DOM
 
@@ -116,14 +116,12 @@ buttonAdd.forEach((agregar) =>{
 
 function agregarAlPlan(id){
     let cursoToAdd = cursos.find(curso => curso.id === parseInt(id))
-    const cursoExistente = cursosPlanFormacion.some(curso => curso.id === parseInt(id)) 
+    const cursoExistente = cursosPlanFormacion.some(curso => curso.id === parseInt(id))
     if(cursoExistente){
         alert("No podés agregar dos veces el mismo curso") 
     } else{
         cursosPlanFormacion.push(cursoToAdd); 
         alert("Felicidades! Añadiste " + cursoToAdd.nombre + " a tu plan de formación.")
-        for(curso of cursosPlanFormacion){
-            cursosPlanFormacionJSON(curso.id, JSON.stringify(curso))
-        }
+        localStorage.setItem("Cursos", JSON.stringify(cursosPlanFormacion))
     }
 }
