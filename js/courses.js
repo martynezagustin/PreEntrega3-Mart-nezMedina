@@ -65,6 +65,8 @@ const cursos = [{
 
 const rowProgramacion = document.querySelector('.programacion')
 const rowMarketingAndEmpresas = document.querySelector('.marketing')
+const containerFormacion = document.getElementById('containerFormacion')
+const counterCourses = document.getElementById('count-course')
 
 let cursosProgram = cursos.filter((curso) => curso.categoria === 'Programación')
 let cursosMarketingAndEmpresas = cursos.filter((curso) => curso.categoria === 'Marketing y Empresas')
@@ -122,6 +124,35 @@ function agregarAlPlan(id){
     } else{
         cursosPlanFormacion.push(cursoToAdd); 
         alert("Felicidades! Añadiste " + cursoToAdd.nombre + " a tu plan de formación.")
+        renderCarrito()
         localStorage.setItem("Cursos", JSON.stringify(cursosPlanFormacion))
     }
+}
+
+function renderCarrito(){
+    containerFormacion.innerHTML = ""
+    counterCourses.innerHTML = `<b>(` + cursosPlanFormacion.length + `)</b>` || []
+    cursosPlanFormacion.forEach((curso) => {
+        const div = document.createElement('div')
+        div.classList.add('card')
+        div.classList.add('ancho-card')
+        div.classList.add('mt-4')
+        div.innerHTML = `<div class="card-body">
+        <h5 class="card-title">${curso.nombre}</h5>
+        <p class="card-duration"><b>Duración: <i>${curso.duracion}</i></b></p>
+        <p class="card-text">${curso.descripcion}</p>
+        <button onclick=removeCurso(${curso.id}) class="btn btn-add btn-secondary" id="${curso.id}">ELIMINAR</button>
+        </div>`
+        containerFormacion.append(div)
+    })
+}
+
+renderCarrito()
+
+function removeCurso(id){
+    const cursoARemover = cursosPlanFormacion.find((curso) => curso.id === id)
+    const index = cursosPlanFormacion.indexOf(cursoARemover)
+    cursosPlanFormacion.splice(index, 1)
+    localStorage.removeItem(index)
+    renderCarrito()
 }
