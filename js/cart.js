@@ -2,6 +2,27 @@ const containerFormacion = document.getElementById('containerFormacion')
 const counterCourses = document.getElementById('count-course')
 let coursesCart = JSON.parse(localStorage.getItem('Cursos')) || []
 
+const buttonAdd = document.querySelectorAll('.btn-add')
+buttonAdd.forEach((agregar) =>{
+    agregar.addEventListener("click", (e) => {
+        agregarAlPlan(e.target.id)
+    })
+    
+})
+
+function agregarAlPlan(id){
+    let cursoToAdd = cursos.find(curso => curso.id === parseInt(id))
+    const cursoExistente = coursesCart.some(curso => curso.id === parseInt(id))
+    if(cursoExistente){
+        alert("No podés agregar dos veces el mismo curso") 
+    } else{
+        coursesCart.push(cursoToAdd); 
+        alert("Felicidades! Añadiste " + cursoToAdd.nombre + " a tu plan de formación.")
+        localStorage.setItem("Cursos", JSON.stringify(coursesCart))
+        renderizarCarrito()
+    }
+}
+
 function renderizarCarrito(){
     containerFormacion.innerHTML = ""
     counterCourses.innerHTML = `<b>(` + coursesCart.length + `)</b>` || []
