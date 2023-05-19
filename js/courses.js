@@ -148,11 +148,3 @@ function renderCarrito(){
 }
 
 renderCarrito()
-
-function removeCurso(id){
-    const cursoARemover = cursosPlanFormacion.find((curso) => curso.id === id)
-    const index = cursosPlanFormacion.indexOf(cursoARemover)
-    cursosPlanFormacion.splice(index, 1)
-    localStorage.setItem("Cursos", JSON.stringify(cursosPlanFormacion))
-    renderCarrito()
-}
