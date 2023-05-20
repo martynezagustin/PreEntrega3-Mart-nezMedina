@@ -65,6 +65,7 @@ const cursos = [{
 
 const rowProgramacion = document.querySelector('.programacion')
 const rowMarketingAndEmpresas = document.querySelector('.marketing')
+const btnVerCurso = document.querySelectorAll('.btn-view-course')
 
 let cursosProgram = cursos.filter((curso) => curso.categoria === 'Programación')
 let cursosMarketingAndEmpresas = cursos.filter((curso) => curso.categoria === 'Marketing y Empresas')
@@ -84,6 +85,7 @@ cursosProgram.forEach((curso) => {
             <p class="card-duration"><b>Duración: <i>${curso.duracion}</i></b></p>
             <p class="card-text">${curso.descripcion}</p>
             <a href="#" class="btn btn-add btn-secondary" id="${curso.id}">AÑADIR A MI PLAN</a>
+            <a href="#" class="btn btn-view-course mt-1 btn-secondary">VER CURSO</a>
             </div>`
 
             rowProgramacion.appendChild(cursoDiv)
@@ -100,7 +102,18 @@ cursosProgram.forEach((curso) => {
                 <p class="card-duration"><b>Duración: <i>${curso.duracion}</i></b></p>
                 <p class="card-text">${curso.descripcion}</p>
                 <a href="#" class="btn btn-add btn-secondary" id="${curso.id}">AÑADIR A MI PLAN</a>
+                <a href="#" class="btn btn-view-course mt-1 btn-secondary">VER CURSO</a>
                 </div>`
     
                 rowMarketingAndEmpresas.appendChild(cursoDiv)
             })
+
+btnVerCurso.forEach((boton) => {
+    boton.addEventListener("click", (e) => {
+        const cursoId = e.target.dataset.cursoId;
+
+        let guardarCurso = localStorage.setItem('cursoSeleccionado', cursoId)
+
+        window.location.href = "course_detail.html"
+    })
+})
