@@ -1,7 +1,7 @@
 const containerFormacion = document.getElementById('containerFormacion')
 const counterCourses = document.getElementById('count-course')
 let coursesCart = JSON.parse(localStorage.getItem('Cursos')) || []
-
+//funcionalidad de botones de ADD
 const buttonAdd = document.querySelectorAll('.btn-add')
 buttonAdd.forEach((agregar) =>{
     agregar.addEventListener("click", (e) => {
@@ -9,7 +9,7 @@ buttonAdd.forEach((agregar) =>{
     })
     
 })
-
+//agrega al carrito de formación
 function agregarAlPlan(id){
     let cursoToAdd = cursos.find(curso => curso.id === parseInt(id))
     const cursoExistente = coursesCart.some(curso => curso.id === parseInt(id))
@@ -22,7 +22,7 @@ function agregarAlPlan(id){
         renderizarCarrito()
     }
 }
-
+//actualiza el carrito
 function renderizarCarrito(){
     containerFormacion.innerHTML = ""
     counterCourses.innerHTML = `<b>(` + coursesCart.length + `)</b>` || []
@@ -40,7 +40,7 @@ function renderizarCarrito(){
         containerFormacion.append(div)
     })
 }
-
+//remueve el curso
 function removeCurso(id){
     const cursoARemover = coursesCart.find((curso) => curso.id === id)
     const index = coursesCart.indexOf(cursoARemover)
