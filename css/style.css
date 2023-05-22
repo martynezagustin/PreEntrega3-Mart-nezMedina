@@ -326,6 +326,9 @@ body {
   grid-template-rows: auto;
   grid-gap: 1rem;
 }
+.cursos .btn{
+  margin: 4px;
+}
 
 .row>*{
   padding-left: 0%;
@@ -364,6 +367,15 @@ body {
 }
 .card .card-text {
   font-size: 0.94em;
+}
+
+.cursoDetail{
+  background-color: #e3ded8;
+}
+
+.cursoDetail .course-img-detail{
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px 1px;
 }
 
 /*fin atributos en general a las cards de servicios y capacitaciones*/
